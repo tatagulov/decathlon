@@ -1,0 +1,16 @@
+[
+  {
+    "athleteName": "Ashton Eaton",
+    "values": {
+      "RUN_1500": 257.52,
+      "POLE_VAULT": 5.20,
+      "RUN_400": 45.00,
+      "HIGH_JUMP": 2.01 ,
+      "LONG_JUM": 7.88 ,
+      "HURDLES_110": 13.69,
+      "DISCUS_THROW":43.34,
+      "JAVELIN_THROW": 63.63,
+      "SHOT_PUT": 14.52
+    }
+  }
+]

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Upload CSV File Example</title>
+
+    <!--Bootstrap 4-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container py-5">
+    <div class="row">
+        <div class="col-10 mx-auto">
+            <h1>Result</h1>
+            <!--display error if any-->
+            <div class="alert alert-danger" role="alert" th:if="${!status}">
+                <strong>Error:</strong>
+                <span th:text="${message}"></span>
+            </div>
+
+            <!--display users list-->
+            <table class="table table-striped" th:if="${status}">
+                <thead>
+                <tr>
+                    <th scope="col">Place</th>
+                    <th scope="col">Athlete name</th>
+                    <th scope="col">Total point</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="calcResult, i : ${calcResults}">
+                    <th scope="row" th:text="${i.index + 1}"></th>
+                    <td th:text="${calcResult.athleteName}"></td>
+                    <td th:text="${calcResult.totalPoint}"></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
